@@ -14,3 +14,15 @@
 - **Structure:** Monorepo with two subdirectories:
   - `/backend` (Quarkus service)
   - `/frontend` (Angular application)
+
+### Git & Branching Strategy
+1. **Feature Branches:**
+   - Every significant milestone or feature slice must have its own branch off `main`.
+   - Branch naming format: `feature/<feature-name>` (e.g., `feature/projects-showcase`, `feature/studies-education`).
+2. **Branch Workflow:**
+   - Before writing code for a feature, ensure working tree is clean, switch to `main`, and run `git checkout -b feature/<feature-name>`.
+   - Implement the feature incrementally with logical commits on that branch.
+   - Do NOT merge back into `main` automatically.
+3. **Completion & Review:**
+   - When the feature is complete and verified, stop and notify the user.
+   - Wait for approval before merging into `main` (via `git checkout main && git merge feature/<feature-name>`) or deleting the feature branch.
